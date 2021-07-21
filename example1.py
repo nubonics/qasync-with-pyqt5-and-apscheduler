@@ -3,7 +3,6 @@ import asyncio
 import functools
 import sys
 from PyQt5.QtWidgets import QWidget, QApplication, QLabel, QPushButton
-# from apscheduler.schedulers.qt import QtScheduler
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
 
@@ -29,7 +28,6 @@ class MainWindow(QWidget):
         self.G1 = gen1()
         self.G2 = gen2()
 
-        # self.scheduler = QtScheduler()
         self.scheduler = AsyncIOScheduler()
         self.scheduler.start()
 
