@@ -49,12 +49,12 @@ class MainWindow(QWidget):
 
     def initUI(self):
         self.L1_start_btn = QPushButton(self)
-        self.L1_start_btn.setText('Download Google'\s Homepage')
+        self.L1_start_btn.setText('Download Google\'s Homepage')
         self.L1_start_btn.setGeometry(0, 0, 300, 20)
         self.L1_start_btn.clicked.connect(self.start_L1_job)
 
         self.L2_start_btn = QPushButton(self)
-        self.L2_start_btn.setText('Download Bing'\s Homepage')
+        self.L2_start_btn.setText('Download Bing\'s Homepage')
         self.L2_start_btn.setGeometry(300, 0, 300, 20)
         self.L2_start_btn.clicked.connect(self.start_L2_job)
 
