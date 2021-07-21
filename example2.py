@@ -43,36 +43,20 @@ class MainWindow(QWidget):
         # print(self.scheduler.get_job('1'))
         self.scheduler.resume_job(job_id='1')
 
-    def stop_L1_job(self):
-        print('stopping L1 job')
-        self.scheduler.pause_job(job_id='1')
-
     def start_L2_job(self):
         print('starting L2 job: bing\'s homepage should have been downloaded if all went well')
         self.scheduler.resume_job(job_id='2')
 
-    def stop_L2_job(self):
-        print('stopping L2 job')
-        self.scheduler.pause_job(job_id='2')
-
     def initUI(self):
         self.L1_start_btn = QPushButton(self)
-        self.L1_start_btn.setText('Start L1')
-        self.L1_start_btn.setGeometry(0, 0, 100, 20)
+        self.L1_start_btn.setText('Download Google'\s Homepage')
+        self.L1_start_btn.setGeometry(0, 0, 300, 20)
         self.L1_start_btn.clicked.connect(self.start_L1_job)
-        self.L1_stop_btn = QPushButton(self)
-        self.L1_stop_btn.setText('Stop L1')
-        self.L1_stop_btn.setGeometry(0, 30, 100, 20)
-        self.L1_stop_btn.clicked.connect(self.stop_L1_job)
 
         self.L2_start_btn = QPushButton(self)
-        self.L2_start_btn.setText('Start L2')
-        self.L2_start_btn.setGeometry(100, 0, 100, 20)
+        self.L2_start_btn.setText('Download Bing'\s Homepage')
+        self.L2_start_btn.setGeometry(300, 0, 300, 20)
         self.L2_start_btn.clicked.connect(self.start_L2_job)
-        self.L2_stop_btn = QPushButton(self)
-        self.L2_stop_btn.setText('Stop L2')
-        self.L2_stop_btn.setGeometry(100, 30, 100, 20)
-        self.L2_stop_btn.clicked.connect(self.stop_L2_job)
 
         self.setGeometry(750, 300, 500, 350)
         self.setWindowTitle('PyQt5 & AsyncIOScheduler')
